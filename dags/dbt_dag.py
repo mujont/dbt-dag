@@ -15,7 +15,6 @@ profile_config = ProfileConfig(
 )
 
 dbt_snowflake_dag = DbtDag(
-    # project_config=ProjectConfig(r"C:\Users\JM\dbt-dag\dags\dbt\data_pipe",),
     project_config=ProjectConfig("/usr/local/airflow/dags/dbt/data_pipe",),
     operator_args={"install_deps": True},
     profile_config=profile_config,
